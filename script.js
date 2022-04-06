@@ -34,15 +34,17 @@ let quizTimer = setInterval(function () {
 
 // Push numeri
 
-let userNums = [];
+setTimeout(function () {
+  let userNums = [];
 
-for (let i = 0; i < numbers.length; i++) {
-  userNums.push(
-    prompt(
-      "Riscrivi i numeri appena visualizzati uno alla volta! Sei al numero: " +
-        (i + 1)
-    )
-  );
-}
+  for (let i = 0; i < 5; i++) {
+    userNums.push(
+      prompt(
+        "Riscrivi i numeri appena visualizzati uno alla volta! Sei al numero: " +
+          (i + 1)
+      )
+    );
+  }
 
-console.log("Full array: " + userNums.join(", "));
+  console.log("Full array: " + userNums.join(", "));
+}, 7000);
