@@ -30,6 +30,7 @@ main {
   width: 400px;
 }
 
-.hide {
-  display: none;
+#result {
+  width: 500px;
+  height: 200px;
 }

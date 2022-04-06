@@ -39,9 +39,11 @@ setTimeout(function () {
 
   for (let i = 0; i < 5; i++) {
     userNums.push(
-      prompt(
-        "Riscrivi i numeri appena visualizzati uno alla volta! Sei al numero: " +
-          (i + 1)
+      parseInt(
+        prompt(
+          "Riscrivi i numeri appena visualizzati uno alla volta! Sei al numero: " +
+            (i + 1)
+        )
       )
     );
   }
@@ -58,7 +60,10 @@ setTimeout(function () {
     } else {
       jsonArray.push({ name: val, matched: false });
     }
+    console.log(firstArray);
+    console.log(secondArray);
   });
 
   console.log(jsonArray);
+  document.getElementById("result").innerHTML = obj[i];
 }, 7000);
