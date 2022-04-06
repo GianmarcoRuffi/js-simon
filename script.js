@@ -8,11 +8,20 @@ while (numbers.length < 5) {
   if (numbers.indexOf(r) === -1) numbers.push(r);
 }
 
-document.getElementById("random-numbers").innerHTML =
-  "Memorizza i seguenti numeri entro 30 secondi: " + numbers;
+let randomNumbers = (document.getElementById("random-numbers").innerHTML =
+  "Memorizza i seguenti numeri entro 30 secondi: " + numbers);
 
 console.log(numbers);
 
-// const countdownTimer = document.getElementById("countdown");
-
-// function updateCountdown
+let timeLeft = 10;
+let quizTimer = setInterval(function () {
+  if (timeLeft <= 0) {
+    clearInterval(quizTimer);
+    document.getElementById("countdown").innerHTML = "Ora riscrivi i numeri!";
+    randomNumbers.classList.add("hide");
+  } else {
+    document.getElementById("countdown").innerHTML =
+      "Ti rimangono " + timeLeft + " secondi.";
+  }
+  timeLeft -= 1;
+}, 1000);
