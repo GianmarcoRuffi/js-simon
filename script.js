@@ -47,4 +47,18 @@ setTimeout(function () {
   }
 
   console.log("Full array: " + userNums.join(", "));
+
+  let firstArray = userNums;
+  let secondArray = numbers;
+  let jsonArray = [];
+
+  firstArray.forEach((val) => {
+    if (secondArray.includes(val)) {
+      jsonArray.push({ name: val, matched: true });
+    } else {
+      jsonArray.push({ name: val, matched: false });
+    }
+  });
+
+  console.log(jsonArray);
 }, 7000);
