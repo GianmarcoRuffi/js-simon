@@ -7,4 +7,12 @@ while (numbers.length < 5) {
   let r = Math.floor(Math.random() * 100) + 1;
   if (numbers.indexOf(r) === -1) numbers.push(r);
 }
+
+document.getElementById("random-numbers").innerHTML =
+  "Memorizza i seguenti numeri entro 30 secondi: " + numbers;
+
 console.log(numbers);
+
+// const countdownTimer = document.getElementById("countdown");
+
+// function updateCountdown
