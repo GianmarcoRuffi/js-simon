@@ -15,11 +15,10 @@ console.log(numbers);
 
 let timeLeft = 10;
 let quizTimer = setInterval(function () {
-  const randomNumbers = document.getElementById("random-numbers");
   if (timeLeft <= 0) {
     clearInterval(quizTimer);
     document.getElementById("countdown").innerHTML = "Ora riscrivi i numeri!";
-    randomNumbers.classList.add("hide");
+    document.getElementById("random-numbers").style.display = "none";
   } else {
     document.getElementById("countdown").innerHTML =
       "Ti rimangono " + timeLeft + " secondi.";
