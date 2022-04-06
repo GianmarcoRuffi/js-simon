@@ -36,7 +36,7 @@ let quizTimer = setInterval(function () {
 
 let userNums = [];
 
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < numbers.length; i++) {
   userNums.push(
     prompt(
       "Riscrivi i numeri appena visualizzati uno alla volta! Sei al numero: " +
@@ -45,4 +45,4 @@ for (let i = 0; i < 5; i++) {
   );
 }
 
-console.log("Full array: " + arr.join(", "));
+console.log("Full array: " + userNums.join(", "));
