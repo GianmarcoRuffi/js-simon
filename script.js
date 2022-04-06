@@ -8,13 +8,14 @@ while (numbers.length < 5) {
   if (numbers.indexOf(r) === -1) numbers.push(r);
 }
 
-let randomNumbers = (document.getElementById("random-numbers").innerHTML =
-  "Memorizza i seguenti numeri entro 30 secondi: " + numbers);
+document.getElementById("random-numbers").innerHTML =
+  "Memorizza i seguenti numeri entro 30 secondi: " + numbers;
 
 console.log(numbers);
 
 let timeLeft = 10;
 let quizTimer = setInterval(function () {
+  const randomNumbers = document.getElementById("random-numbers");
   if (timeLeft <= 0) {
     clearInterval(quizTimer);
     document.getElementById("countdown").innerHTML = "Ora riscrivi i numeri!";
