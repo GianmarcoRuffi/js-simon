@@ -65,12 +65,12 @@ setTimeout(function () {
   });
 
   console.log(jsonArray);
-  document.getElementById("result").innerHTML = obj[i];
+  document.getElementById("result").innerHTML = val[i];
 
   const result = jsonArray.filter(checkMatch);
 
-  function checkMatch(obj) {
-    return obj.matched === true;
+  function checkMatch(val) {
+    return val.matched === true;
   }
 
   console.log(result);
