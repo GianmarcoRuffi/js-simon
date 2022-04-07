@@ -65,7 +65,6 @@ setTimeout(function () {
   });
 
   console.log(jsonArray);
-  document.getElementById("result").innerHTML = val[i];
 
   const result = jsonArray.filter(checkMatch);
 
