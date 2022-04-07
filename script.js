@@ -13,7 +13,7 @@ while (numbers.length < 5) {
 // Print numeri
 
 document.getElementById("random-numbers").innerHTML =
-  "Memorizza i seguenti numeri entro 30 secondi: " + numbers;
+  "Memorizza i seguenti numeri entro 5 secondi: " + numbers;
 
 console.log(numbers);
 
