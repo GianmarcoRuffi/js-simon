@@ -72,4 +72,6 @@ setTimeout(function () {
   function checkMatch(obj) {
     return obj.matched === true;
   }
+
+  console.log(result);
 }, 7000);
