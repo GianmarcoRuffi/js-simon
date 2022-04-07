@@ -66,4 +66,10 @@ setTimeout(function () {
 
   console.log(jsonArray);
   document.getElementById("result").innerHTML = obj[i];
+
+  const result = jsonArray.filter(checkMatch);
+
+  function checkMatch(obj) {
+    return obj.matched === true;
+  }
 }, 7000);
